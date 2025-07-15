@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Center Kanban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Painel de Atendimento - Call Center</h1>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="total-tickets">0</div>
+                <div class="stat-label">Total Chamados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="active-tickets">0</div>
+                <div class="stat-label">Em Andamento</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="completed-tickets">0</div>
+                <div class="stat-label">Finalizados</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="simulation-controls">
+        <div class="simulation-title">Controle da Simulação</div>
+        <div class="simulation-buttons">
+            <button class="btn btn-primary" id="start-simulation">Iniciar Simulação</button>
+            <button class="btn btn-danger" id="stop-simulation">Parar Simulação</button>
+            <button class="btn btn-secondary" id="reset-simulation">Resetar</button>
+        </div>
+        <div style="margin-top: 15px;">
+            <div style="font-size: 14px; color: var(--dark); margin-bottom: 5px;">Velocidade:</div>
+            <input type="range" id="simulation-speed" min="1" max="10" value="5">
+        </div>
+    </div>
+
+    <div class="kanban-container">
+        <div class="kanban-column" id="waiting">
+            <div class="column-header">
+                <div class="column-title">Em Espera</div>
+                <div class="column-count" id="waiting-count">0</div>
+            </div>
+        </div>
+
+        <div class="kanban-column" id="in-progress">
+            <div class="column-header">
+                <div class="column-title">Em Atendimento</div>
+                <div class="column-count" id="in-progress-count">0</div>
+            </div>
+        </div>
+
+        <div class="kanban-column" id="analyzing">
+            <div class="column-header">
+                <div class="column-title">Analisando</div>
+                <div class="column-count" id="analyzing-count">0</div>
+            </div>
+        </div>
+
+        <div class="kanban-column" id="completed">
+            <div class="column-header">
+                <div class="column-title">Finalizados</div>
+                <div class="column-count" id="completed-count">0</div>
+            </div>
+        </div>
+
+        <div class="kanban-column" id="feedback">
+            <div class="column-header">
+                <div class="column-title">Avaliação</div>
+                <div class="column-count" id="feedback-count">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
