@@ -1,6 +1,6 @@
 # 📞 Kanban de Atendimento - Call Center
 
-![status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)  
+![status](https://img.shields.io/badge/status-em%20CONCLUIDO-green)  
 ![license](https://img.shields.io/badge/licença-MIT-green)  
 ![tecnologias](https://img.shields.io/badge/Tecnologias-HTML5%20|%20CSS3%20|%20JavaScript-blue)
 
